@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Globalne ustawienia */
 body {
   background-image: url('background.png');
@@ -91,22 +92,35 @@ body {
 }
 
 /* Boxy */
+=======
+body {
+  background-image: url('background.png');
+
+}
+ 
+>>>>>>> 3e55d48826342a2774e851b6d69b0753f726dd08
 .box1 {
   background-color: #000;
   color: #fff;
   opacity: 0.5;
+<<<<<<< HEAD
   margin-top: 500px; /* Dystans od menu */
   width: 80%; /* Ustalamy szerokość na 80% szerokości ekranu */
   padding: 20px;
   text-align: center;
 }
 
+=======
+}
+ 
+>>>>>>> 3e55d48826342a2774e851b6d69b0753f726dd08
 .box2 {
   background-color: rgba(0, 0, 0, 0.5); 
   color: #fff;
   padding: 20px 40px; 
   border: 1px solid black;
   text-align: center;
+<<<<<<< HEAD
   width: 400px;
   margin-top: 20px; 
 }
@@ -125,3 +139,12 @@ p {
 .menu ul > li.active .dropdown {
   display: block; /* Podmenu widoczne po kliknięciu */
 }
+=======
+  margin: 0 auto;
+  width: 200px;
+}
+
+.container1 {
+
+}
+>>>>>>> 3e55d48826342a2774e851b6d69b0753f726dd08
