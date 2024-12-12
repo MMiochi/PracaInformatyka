@@ -1,0 +1,127 @@
+/* Globalne ustawienia */
+body {
+  background-image: url('background.png');
+  margin: 0; 
+  height: 100vh; 
+  display: flex; 
+  flex-direction: column; /* Ustawiamy kolumnową strukturę */
+  align-items: center; /* Wyśrodkowanie w poziomie */
+  justify-content: flex-start; /* Elementy od góry */
+}
+
+/* Menu */
+.menu {
+  background-image: url('header.png'); /* Ścieżka do obrazu */
+  background-size: cover; /* Ustawia obraz na pełny rozmiar, wypełniając dostępne miejsce */
+  background-position: center; /* Ustawienie obrazu w centrum */
+  background-repeat: no-repeat; /* Zapobiega powtarzaniu obrazu */
+  width: 100%; /* Rozciąga się na całą szerokość strony */
+  height: 300px; /* Ustalamy stałą wysokość dla headera */
+  position: fixed; /* Menu zawsze na górze */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Menu nad innymi elementami */
+}
+
+/* Lista menu */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 50px 0 0 0; /* Dodaje odstęp 50px od góry, przesuwając tylko przyciski */
+  display: flex;
+  justify-content: center; /* Wyśrodkowanie elementów w menu */
+  align-items: center;
+  height: 100%; /* Wysokość menu */
+}
+
+/* Elementy menu głównego */
+.menu ul > li {
+  position: relative; /* Pozycjonowanie względne, aby podmenu mogło być pozycjonowane absolutnie */
+  margin: 0 15px; /* Odstęp między przyciskami */
+}
+
+/* Styl dla przycisków menu */
+.menu ul > li > a {
+  display: block;
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.7); /* Tło menu głównego */
+  font-size: 18px;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+.menu ul > li > a:hover {
+  background-color: rgba(0, 0, 0, 0.9); /* Zmiana koloru po najechaniu */
+}
+
+/* Ukryte podmenu */
+.dropdown {
+  display: none; /* Ukrywamy podmenu */
+  position: absolute;
+  top: 100%; /* Ustawienie podmenu tuż pod głównym przyciskiem */
+  left: 0;
+  background-color: #444; /* Tło podmenu */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  border-radius: 5px;
+  z-index: 999; /* Podmenu nad innymi elementami */
+}
+
+/* Styl dla elementów w podmenu */
+.dropdown li a {
+  padding: 10px 15px;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.dropdown li a:hover {
+  background-color: #666; /* Zmiana koloru po najechaniu */
+}
+
+/* Wyświetlanie podmenu po najechaniu lub kliknięciu */
+.menu ul > li:hover .dropdown {
+  display: block; /* Podmenu widoczne po najechaniu */
+}
+
+/* Boxy */
+.box1 {
+  background-color: #000;
+  color: #fff;
+  opacity: 0.5;
+  margin-top: 500px; /* Dystans od menu */
+  width: 80%; /* Ustalamy szerokość na 80% szerokości ekranu */
+  padding: 20px;
+  text-align: center;
+}
+
+.box2 {
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: #fff;
+  padding: 20px 40px; 
+  border: 1px solid black;
+  text-align: center;
+  width: 400px;
+  margin-top: 20px; 
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Ustawienia dla dropdown (po kliknięciu) */
+.menu ul > li.active .dropdown {
+  display: block; /* Podmenu widoczne po kliknięciu */
+}

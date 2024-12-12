@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Life is Strange Wiki</title>
+</head>
+<body>
+    <!-- Menu -->
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">Postacie</a>
+                <ul class="dropdown">
+                    <li><a href="#">Podkategoria 1</a></li>
+                    <li><a href="#">Podkategoria 2</a></li>
+                    <li><a href="#">Podkategoria 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Gry</a>
+                <ul class="dropdown">
+                    <li><a href="#">Podkategoria 1</a></li>
+                    <li><a href="#">Podkategoria 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Extras</a>
+                <ul class="dropdown">
+                    <li><a href="#">Podkategoria 1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Główna zawartość -->
+    <div class="box1"></div>
+    <div class="box2">
+        <h1>Welcome to Life is Strange Wiki!</h1>
+        <p>
+            Welcome to the Life is Strange wiki—a collaborative project to create the most definitive, 
+            accurate, and accessible encyclopedia and reference for everything related to the Life is Strange series.
+        </p>
+    </div>
+
+    <!-- Skrypt do rozwijanego menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuItems = document.querySelectorAll('.menu > ul > li');
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    const dropdown = item.querySelector('.dropdown');
+                    if (dropdown) {
+                        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                    }
+                    e.stopPropagation();
+                });
+            });
+
+            document.addEventListener('click', function() {
+                const dropdowns = document.querySelectorAll('.dropdown');
+                dropdowns.forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
